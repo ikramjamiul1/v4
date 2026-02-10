@@ -55,9 +55,10 @@
 
     .grid a {
       display: block;
-      border-radius: 16px;
+      border-radius: 20px;  /* Rounded corners */
       overflow: hidden;
       box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      aspect-ratio: 1 / 1;   /* Makes the tile a perfect square */
       transition: transform 0.2s;
     }
 
@@ -67,7 +68,8 @@
 
     .grid img {
       width: 100%;
-      height: auto;
+      height: 100%;
+      object-fit: cover; /* Cover the square without stretching */
       display: block;
     }
 
@@ -88,7 +90,7 @@
 
   <!-- Heading Card -->
   <div class="card">
-    <h1>Let's take a walk down memory lane princess</h1>
+    <h1>Let's take a walk down memory lane, princess. :)</h1>
   </div>
 
   <!-- Tiles Grid -->
