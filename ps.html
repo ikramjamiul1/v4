@@ -70,8 +70,10 @@
       cursor: pointer;
       position: absolute;
       top: 50%;
-      width: auto;
-      padding: 12px;
+      width: 44px;
+      height: 44px;
+      line-height: 44px;
+      text-align: center;
       margin-top: -22px;
       color: white;
       font-weight: bold;
@@ -94,33 +96,15 @@
       right: 10px;
     }
 
-    /* Caption */
-    .caption {
-      text-align: center;
-      padding: 10px;
+    /* Counter */
+    .counter {
+      margin-top: 10px;
       font-size: 20px;
       color: #ff4d4d;
-    }
-
-    /* Dots */
-    .dots-container {
-      text-align: center;
-      padding: 10px 0;
-    }
-
-    .dot {
-      cursor: pointer;
-      height: 15px;
-      width: 15px;
-      margin: 0 5px;
-      background-color: #ccc;
-      border-radius: 50%;
-      display: inline-block;
-      transition: background-color 0.3s;
-    }
-
-    .active, .dot:hover {
-      background-color: #ff4d4d;
+      background-color: rgba(255,255,255,0.85);
+      padding: 8px 16px;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
     }
 
     @media (max-width: 500px) {
@@ -130,10 +114,12 @@
 
       .prev, .next {
         font-size: 18px;
-        padding: 8px;
+        width: 36px;
+        height: 36px;
+        line-height: 36px;
       }
 
-      .caption {
+      .counter {
         font-size: 18px;
       }
     }
@@ -149,128 +135,64 @@
   <!-- Slideshow -->
   <div class="slideshow-container">
 
-<div class="slides">
-  <img src="photo1.jpg" alt="Photo 1">
-</div>
-<div class="slides">
-  <img src="photo2.jpg" alt="Photo 2">
-</div>
-<div class="slides">
-  <img src="photo3.jpg" alt="Photo 3">
-</div>
-<div class="slides">
-  <img src="photo4.jpg" alt="Photo 4">
-</div>
-<div class="slides">
-  <img src="photo5.jpg" alt="Photo 5">
-</div>
-<div class="slides">
-  <img src="photo6.jpg" alt="Photo 6">
-</div>
-<div class="slides">
-  <img src="photo7.jpg" alt="Photo 7">
-</div>
-<div class="slides">
-  <img src="photo8.jpg" alt="Photo 8">
-</div>
-<div class="slides">
-  <img src="photo9.jpg" alt="Photo 9">
-</div>
-<div class="slides">
-  <img src="photo10.jpg" alt="Photo 10">
-</div>
-<div class="slides">
-  <img src="photo11.jpg" alt="Photo 11">
-</div>
-<div class="slides">
-  <img src="photo12.jpg" alt="Photo 12">
-</div>
-<div class="slides">
-  <img src="photo13.jpg" alt="Photo 13">
-</div>
-<div class="slides">
-  <img src="photo14.jpg" alt="Photo 14">
-</div>
-<div class="slides">
-  <img src="photo15.jpg" alt="Photo 15">
-</div>
-<div class="slides">
-  <img src="photo16.jpg" alt="Photo 16">
-</div>
-<div class="slides">
-  <img src="photo17.jpg" alt="Photo 17">
-</div>
-<div class="slides">
-  <img src="photo18.jpg" alt="Photo 18">
-</div>
-<div class="slides">
-  <img src="photo19.jpg" alt="Photo 19">
-</div>
-<div class="slides">
-  <img src="photo20.jpg" alt="Photo 20">
-</div>
-<div class="slides">
-  <img src="photo21.jpg" alt="Photo 21">
-</div>
+    <!-- 21 Slides -->
+    <div class="slides"><img src="photo1.jpg"></div>
+    <div class="slides"><img src="photo2.jpg"></div>
+    <div class="slides"><img src="photo3.jpg"></div>
+    <div class="slides"><img src="photo4.jpg"></div>
+    <div class="slides"><img src="photo5.jpg"></div>
+    <div class="slides"><img src="photo6.jpg"></div>
+    <div class="slides"><img src="photo7.jpg"></div>
+    <div class="slides"><img src="photo8.jpg"></div>
+    <div class="slides"><img src="photo9.jpg"></div>
+    <div class="slides"><img src="photo10.jpg"></div>
+    <div class="slides"><img src="photo11.jpg"></div>
+    <div class="slides"><img src="photo12.jpg"></div>
+    <div class="slides"><img src="photo13.jpg"></div>
+    <div class="slides"><img src="photo14.jpg"></div>
+    <div class="slides"><img src="photo15.jpg"></div>
+    <div class="slides"><img src="photo16.jpg"></div>
+    <div class="slides"><img src="photo17.jpg"></div>
+    <div class="slides"><img src="photo18.jpg"></div>
+    <div class="slides"><img src="photo19.jpg"></div>
+    <div class="slides"><img src="photo20.jpg"></div>
+    <div class="slides"><img src="photo21.jpg"></div>
 
-
-    <!-- Next/prev buttons -->
+    <!-- Arrows -->
     <a class="prev" onclick="plusSlides(-1)">❮</a>
     <a class="next" onclick="plusSlides(1)">❯</a>
   </div>
 
-  <!-- Dots -->
-<div class="dots-container">
-  <span class="dot" onclick="currentSlide(1)"></span>
-  <span class="dot" onclick="currentSlide(2)"></span>
-  <span class="dot" onclick="currentSlide(3)"></span>
-  <span class="dot" onclick="currentSlide(4)"></span>
-  <span class="dot" onclick="currentSlide(5)"></span>
-  <span class="dot" onclick="currentSlide(6)"></span>
-  <span class="dot" onclick="currentSlide(7)"></span>
-  <span class="dot" onclick="currentSlide(8)"></span>
-  <span class="dot" onclick="currentSlide(9)"></span>
-  <span class="dot" onclick="currentSlide(10)"></span>
-  <span class="dot" onclick="currentSlide(11)"></span>
-  <span class="dot" onclick="currentSlide(12)"></span>
-  <span class="dot" onclick="currentSlide(13)"></span>
-  <span class="dot" onclick="currentSlide(14)"></span>
-  <span class="dot" onclick="currentSlide(15)"></span>
-  <span class="dot" onclick="currentSlide(16)"></span>
-  <span class="dot" onclick="currentSlide(17)"></span>
-  <span class="dot" onclick="currentSlide(18)"></span>
-  <span class="dot" onclick="currentSlide(19)"></span>
-  <span class="dot" onclick="currentSlide(20)"></span>
-  <span class="dot" onclick="currentSlide(21)"></span>
-</div>
-
+  <!-- Counter -->
+  <div class="counter" id="counter">
+    1 / 21
+  </div>
 
   <script>
     let slideIndex = 1;
+    const totalSlides = 21;
     showSlides(slideIndex);
 
     function plusSlides(n) {
       showSlides(slideIndex += n);
     }
 
-    function currentSlide(n) {
-      showSlides(slideIndex = n);
-    }
-
     function showSlides(n) {
       let i;
       const slides = document.getElementsByClassName("slides");
-      const dots = document.getElementsByClassName("dot");
-      if (n > slides.length) {slideIndex = 1}
-      if (n < 1) {slideIndex = slides.length}
+
+      if (n > slides.length) { slideIndex = 1 }
+      if (n < 1) { slideIndex = slides.length }
+
       for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
       }
-      for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-      }
-      slides[slideIndex-1].style.display = "block";
-      dots[slideIndex-1].className += " active";
+
+      slides[slideIndex - 1].style.display = "block";
+
+      // Update counter
+      document.getElementById("counter").innerText =
+        slideIndex + " / " + totalSlides;
     }
   </script>
 
