@@ -8,7 +8,20 @@
       font-family: Arial, sans-serif;
       text-align: center;
       margin-top: 100px;
-      background-color: #fff0f5;
+
+      /* Crinkled paper background */
+      background-image: url("paper-bg.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-attachment: fixed;
+    }
+
+    h1, p {
+      background-color: rgba(255, 255, 255, 0.7);
+      display: inline-block;
+      padding: 15px 20px;
+      border-radius: 12px;
     }
 
     button {
@@ -19,13 +32,15 @@
       background-color: #ff4d4d;
       color: white;
       cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      margin-top: 20px;
     }
   </style>
 </head>
 <body>
 
-  <h1>Oops… try again 😘</h1>
-  <p>You know you want to say yes!</p>
+  <h1>Oops… try again 😘</h1><br><br>
+  <p>You know you want to say yes!</p><br><br>
 
   <a href="index.html">
     <button>Go Back</button>
