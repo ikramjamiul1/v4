@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Valentine’s Day Gift Hint</title>
+  <title>The Playlist of Us</title>
 
   <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
@@ -44,24 +44,30 @@
       color: #cc0000;
     }
 
-    /* Hint Image Card */
-    .image-card {
+    /* Playlist Card */
+    .playlist-card {
       background-color: rgba(255, 255, 255, 0.85);
-      padding: 25px;
+      padding: 30px;
       border-radius: 16px;
       box-shadow: 0 10px 25px rgba(0,0,0,0.25);
       width: 100%;
-      max-width: 700px;
+      max-width: 500px;
       display: flex;
       justify-content: center;
     }
 
-    .image-card img {
+    .playlist-card a img {
       width: 100%;
-      max-width: 400px;
-      border-radius: 14px;
-      box-shadow: 0 6px 15px rgba(0,0,0,0.25);
-      object-fit: contain;
+      max-width: 300px;
+      border-radius: 16px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      cursor: pointer;
+    }
+
+    .playlist-card a img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.35);
     }
 
     /* Mobile */
@@ -76,12 +82,14 @@
 
   <!-- Heading -->
   <div class="card">
-    <h1>A Valentine’s Day Gift Hint 💌</h1>
+    <h1>The Playlist of Us 🎵💖</h1>
   </div>
 
-  <!-- Hint Image -->
-  <div class="image-card">
-    <img src="hint.png" alt="Valentine's Day Gift Hint">
+  <!-- Playlist Button -->
+  <div class="playlist-card">
+    <a href="YOUR_SPOTIFY_LINK_HERE" target="_blank">
+      <img src="playlist.jpg" alt="Open Our Playlist">
+    </a>
   </div>
 
 </body>
