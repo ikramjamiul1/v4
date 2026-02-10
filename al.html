@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Letters</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Patrick Hand', cursive;
+      background-image: url("paper-bg.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-attachment: fixed;
+
+      margin: 0;
+      min-height: 100vh;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 20px;
+      gap: 20px;
+    }
+
+    /* Heading Card */
+    .card {
+      background-color: rgba(255, 255, 255, 0.85);
+      padding: 30px 20px;
+      border-radius: 16px;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+      width: 100%;
+      max-width: 600px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 32px;
+      color: #cc0000;
+    }
+
+    /* Slideshow container */
+    .slideshow-container {
+      position: relative;
+      max-width: 600px;
+      width: 100%;
+      margin: 0 auto;
+      border-radius: 16px;
+      background-color: rgba(255,255,255,0.85);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+      padding: 30px 20px;
+    }
+
+    /* Slides */
+    .slide {
+      display: none;
+      font-size: 20px;
+      color: #ff4d4d;
+      line-height: 1.5;
+      text-align: left;
+    }
+
+    /* Next/prev buttons */
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: auto;
+      padding: 12px;
+      color: white;
+      font-weight: bold;
+      font-size: 22px;
+      border-radius: 50%;
+      user-select: none;
+      background-color: rgba(0,0,0,0.5);
+      transition: 0.3s;
+    }
+
+    .prev:hover, .next:hover {
+      background-color: rgba(0,0,0,0.8);
+    }
+
+    .prev {
+      left: 10px;
+    }
+
+    .next {
+      right: 10px;
+    }
+
+    /* Dots */
+    .dots-container {
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    .dot {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 0 5px;
+      background-color: #ccc;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.3s;
+    }
+
+    .active, .dot:hover {
+      background-color: #ff4d4d;
+    }
+
+    @media (max-width: 500px) {
+      h1 {
+        font-size: 26px;
+      }
+
+      .slide {
+        font-size: 18px;
+      }
+
+      .prev, .next {
+        font-size: 18px;
+        padding: 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Heading Card -->
+  <div class="card">
+    <h1>Letters I've Written</h1>
+  </div>
+
+  <!-- Slideshow -->
+  <div class="slideshow-container">
+
+    <div class="slide">
+      <p>Dear Noor, I remember the first time we met…</p>
+    </div>
+
+    <div class="slide">
+      <p>My love, today I want to tell you how much you mean to me…</p>
+    </div>
+
+    <div class="slide">
+      <p>Sweetheart, every moment with you feels like magic…</p>
+    </div>
+
+    <!-- Add more letters here -->
+    
+    <!-- Next/prev buttons -->
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+  </div>
+
+  <!-- Dots -->
+  <div class="dots-container">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+
+  <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      const slides = document.getElementsByClassName("slide");
+      const dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (let i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+    }
+  </script>
+
+</body>
+</html>
