@@ -53,33 +53,36 @@
       border-radius: 16px;
       background-color: rgba(255,255,255,0.85);
       box-shadow: 0 10px 25px rgba(0,0,0,0.25);
-      padding: 30px 20px;
+      padding: 30px 40px; /* extra padding to accommodate side arrows */
     }
 
     /* Slides */
     .slide {
       display: none;
-      font-size: 20px;
       color: #ff4d4d;
-      line-height: 1.5;
+      line-height: 1.6;
       text-align: left;
     }
 
-    /* Next/prev buttons */
+    .slide p {
+      margin-bottom: 15px;
+    }
+
+    /* Next/prev buttons outside */
     .prev, .next {
       cursor: pointer;
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      width: auto;
-      padding: 12px;
-      color: white;
       font-weight: bold;
-      font-size: 22px;
+      font-size: 28px;
+      padding: 10px 15px;
       border-radius: 50%;
-      user-select: none;
       background-color: rgba(0,0,0,0.5);
+      color: white;
+      user-select: none;
       transition: 0.3s;
+      z-index: 10;
     }
 
     .prev:hover, .next:hover {
@@ -87,11 +90,11 @@
     }
 
     .prev {
-      left: 10px;
+      left: -50px; /* move outside card */
     }
 
     .next {
-      right: 10px;
+      right: -50px; /* move outside card */
     }
 
     /* Dots */
@@ -125,8 +128,14 @@
       }
 
       .prev, .next {
-        font-size: 18px;
-        padding: 8px;
+        font-size: 22px;
+        padding: 8px 12px;
+        left: -40px;
+        right: -40px;
+      }
+
+      .slideshow-container {
+        padding: 20px 30px;
       }
     }
   </style>
@@ -142,110 +151,37 @@
   <div class="slideshow-container">
 
     <div class="slide">
-      <p>Hi Noor :)
-
-I didn’t realise I wanted to write you a letter till I realised that I wasn’t able to fully express how I feel about you in a text message. So I’m writing this letter for you and I’m worried it might sound cliche or cringey but with you I really don’t mind that. 
-
-It’s been just over a month now since we’ve properly started speaking and honestly I wouldn’t change a thing about it. It’s weird with how timing works since we were kinda interweaved into each others live for the past two years, with my aunt and your brother, so it was really just a matter of time before we met. 
-
-Noor I genuinely don’t know where or how this will continue but I really do need it to work cos even though you’ve been in my life for so short I genuinely couldn’t imagine it without you in it. I really do pray this works and we thrive. I like that we just make sense, we’re like two puzzle pieces that just fit with ease I don’t know how to explain it but it just feels so right. One of my favourite things will always be the way we show our love for each other. I never feel like I’m doing too much or too little for you cos you make me feel so appreciated and it’s something I’ve never had before you but I love it. And I hope you know there’s not a day that goes by without me appreciating everything about you. 
-
-I like that we have a similar story and are always on the same page. I really hope that we’re able to keep writing this story just together now. I like that we think the same way and care about the same things like our children’s assemblies and parents evenings. It’s the small things that are important to me and always will be. 
-
-I realise I could write forever but eventually this letter has gotta come to an end. But I pinky promise you I will always keep you a priority. I pinky promise I will try my hardest to make you laugh everyday. I pinky promise I will do my best to make you know how valuable you are. I could keep going but I might run out of stuff to pinky promise in the next love letters to come. 
-
-I think I’m gonna try end each letter with some that’s means a lot to me in that moment of my life.  And right now it’s probably this: ‘May you find someone who speaks your language, so you don’t have to spend a life time translating your soul’. I don’t think anyone speaks my soul better than you do and lucky for me it only took 20 years and not a lifetime. 
-
-I really do like you Noor you are genuine perfection everything about you. Your laugh. Your smile. Those little crease near your lips when you make that smile. How your face scrunches up when you’re happy. I hate that people in your life have ever made you feel like you’re anything but perfect cos you really are. 
-
-From your jammy dodger :) 
-PS I cried whilst writing this for you.</p>
+      <p>Hi Noor :)</p>
+      <p>I didn’t realise I wanted to write you a letter till I realised that I wasn’t able to fully express how I feel about you in a text message. So I’m writing this letter for you and I’m worried it might sound cliche or cringey but with you I really don’t mind that.</p>
+      <p>It’s been just over a month now since we’ve properly started speaking and honestly I wouldn’t change a thing about it. It’s weird with how timing works since we were kinda interweaved into each others live for the past two years, with my aunt and your brother, so it was really just a matter of time before we met. </p>
+      <p>Noor I genuinely don’t know where or how this will continue but I really do need it to work cos even though you’ve been in my life for so short I genuinely couldn’t imagine it without you in it. I really do pray this works and we thrive. I like that we just make sense, we’re like two puzzle pieces that just fit with ease I don’t know how to explain it but it just feels so right. One of my favourite things will always be the way we show our love for each other. I never feel like I’m doing too much or too little for you cos you make me feel so appreciated and it’s something I’ve never had before you but I love it. And I hope you know there’s not a day that goes by without me appreciating everything about you. </p>  
+      <p>I like that we have a similar story and are always on the same page. I really hope that we’re able to keep writing this story just together now. I like that we think the same way and care about the same things like our children’s assemblies and parents evenings. It’s the small things that are important to me and always will be. </p>  
+      <p>I realise I could write forever but eventually this letter has gotta come to an end. But I pinky promise you I will always keep you a priority. I pinky promise I will try my hardest to make you laugh everyday. I pinky promise I will do my best to make you know how valuable you are. I could keep going but I might run out of stuff to pinky promise in the next love letters to come. </p>  
+      <p>I think I’m gonna try end each letter with some that’s means a lot to me in that moment of my life.  And right now it’s probably this: ‘May you find someone who speaks your language, so you don’t have to spend a life time translating your soul’. I don’t think anyone speaks my soul better than you do and lucky for me it only took 20 years and not a lifetime.  </p>  
+      <p>I really do like you Noor you are genuine perfection everything about you. Your laugh. Your smile. Those little crease near your lips when you make that smile. How your face scrunches up when you’re happy. I hate that people in your life have ever made you feel like you’re anything but perfect cos you really are. </p>  
+      
+      <p>From your jammy dodger :)<br>PS I cried whilst writing this for you.</p>
     </div>
 
     <div class="slide">
-      <p>Hi Noor,
-
-I’m writing this as I’m on the plane back and I really miss you dude. My eyes started watering and it made me realise you have this hold on me that really confuses me. I think recently I’ve been having this panicking feeling that you’re gonna leave me for some reason idk why. Like not often it will be for like a minute a day and I’m not complaining about that it helps me realise just how valuable what I have is. 
-
-I think as much of the ‘issue’ we spoke about whilst I was gone had truth to it. It also was just cos I simply missed you I think. I miss you Noor I miss you a lot. It’s starting to feel like this yearning feeling in my chest and it’s just something I’ve never felt before. I’m happy I’ve experienced something so great in my lifetime and I’m so curious what life has for us. And I say us cos there will be an us, I need there to be an us, cos without you noor I simply am nothing but a person. 
-
-A big thing I’m missing right now is your smell. This might become border line creepy but I hope you find it sweet. But it’s that deep but light and floral but somehow fruity. Idk even how to explain it and for all
-I know I could’ve described it completely wrong but I just miss it. I miss hearing that laugh of yours and I loved hearing your chuckle on the phone whilst I was on the balcony, I needed that a lot more than I thought. 
-
-And the biggest thing I miss that I’ve taken for granted was you being there in the morning I wake up and being at work with you and your literally a couple of meters from me.  
-
-Right now I’m listening to the playlist I made for you because I’ve got just over an hour left of this flight and this playlist is about the same length of time. I genuinely just can’t believe I’m this lucky to have a girlfriend and eventually a wife like you. 
-
-Last letter I wrote you like a little quote that meant something to me. This letters one is ‘ to be loved is to be known’ and no one knows me like you. Something about you from the beginning that day we sat on the bench outside of work. Before there was even an us. I felt like I could tell you everything, be vulnerable in front of you, and genuinely just be myself. And I always felt heard and understood and it was just amazing. And the way you know me I never will question the idea that you love me. 
-
-I love you Noor. I love your scent. I love your childish giggle that makes me feel like it’s just us two in the whole world. You’re gonna hate this one but I love your forehead it’s something that makes you you and I love it I can’t wait to see you so I can kiss you there. I can tell in the past couple of weeks you’ve gotten a lot more comfortable with me I think. It’s the way I can sing that song and you start dancing and just idk I stare at you in that moment with the most longing awe of how I’ll never have to worry that I won’t have nights where me and my wife are dancing in the refrigerator light. 
-
-I miss you with all my heart cos at the end of the day my heart is yours and will never beat for someone else. I love you darling I can’t wait to see you. 
-
-From your little ray of sunshine that only shines for you :)
-
-Hi Noor :p
-I hope you’re enjoying yourself in Italy right now. I can’t wait for the day we’re able to travel together. It’s the little things I’m gonna really enjoy, like going to the airport together and sitting on the plane together. Not having to message you when I land cos you’ll be sat right next to me. And for some reason us getting our luggage. I am excited and can’t wait. And when you really think about it your next birthday hopefully we should be able to go somewhere. 
-
-I think about it a lot how different how our lives are compared to when we first met. You were rude and straight up a prick to me but I kept pushing myself into your life and look where we are now. When you’re reading this we would’ve been together for three months which is insane. It doesn’t even feel like we’ve known each other that short, I genuinely try to remember my life before you and I can’t. I don’t know why but it feels like you’re this character that’s been in my life for ever.</p>
+      <p>Hi Noor,</p>
+      <p>I’m writing this as I’m on the plane back and I really miss you dude. My eyes started watering and it made me realise you have this hold on me that really confuses me...</p>
+      <p>I love you Noor. I love your scent. I love your childish giggle that makes me feel like it’s just us two in the whole world...</p>
+      <p>From your little ray of sunshine that only shines for you :)</p>
     </div>
 
     <div class="slide">
-      <p>Hi Noor :p
-
-I’m writing this whilst you’re sleeping with a couple days away from our third month and i just thought it would be time to write a letter for you. I guess you could say our probations come to an end and I hope you found that joke funny if not I’m gonna kill myself. Anyways I love this I love us I love it all right now, I’m really happy with where we are it’s been amazing. 
-
-I don’t know why or how this happened but today (as in when I’m writing this) when we called for some reason both of us decided to start the call with kissing the camera and I’m not sure why but think it really shows we’re one of the same. 
-
-
-I think looking back on the three months we’ve actually come so far and I don’t say it enough but I’m really proud of you more than anything. You do some much for me, for us, and for you that at some point it becomes commendable. And I’m proud of you princess, you’re amazing. You work so hard on yourself for us and I see it all the time and I appreciate it. Sometimes I worry you think I don’t notice it but I do. 
-
-My goal is to give this to you on our third month along with the necklace that was supposed to be for your birthday. I know we’re going to the saatchi gallery so hopefully if I time this right I’ll be able to find a place where it’s just us two in the whole gallery and give it to you. 
-
-I sometimes worry that you might leave me cos your bored of me or cos you can do better than me cos you can and I try everyday to be better for you cos I know you deserve everything between the sun and the moon and I do try but I don’t know. I hate when we fall out sometimes not even cos I’m worried you’ll leave but cos I hate making you sad it’s one of the worst feelings ever cos you’re my baby at the end of the day and I just wanna keep you smiling all the time. 
-
-Instead of a quote or phrase this letter I thought I’d switch it up. I’m picking out some of the times you used the word love through our messages. First one which I think is insane for you to say a whole month before I asked you out but ‘oh my mum would just love you’. I was really hoping on that and it seems she does like me but it also seems that’s something you were thinking about so anyways. This one is 10/05/25 and you flat out said ‘cause you love me really’ and I really did. Another one 29/05/25 ‘it’s one of the things I love about you’ and you were talking about me noticing and remembering things about you. And I make it a point to make sure I do and I think that’s why it bugged me out the Audi or Mercedes thing and I think that’s why it bugged you out too, cos you take pride in the fact I remember things about you. But I’m so sure you rarely mentioned Mercedes but at least now I know forever. And I’ll make sure to get you that Porsche to make up for it. 
-And my last one for now ‘you’re the only person i truly love spending time with’ and I wonder if you can guess when you wrote that. 
-
-I love you Noor I always will. I love your clothes idk what it is but recently you’ve just been dressed like a cosy bear that I wanna hug all the time. I love your hair, it’s just so perfect all the time and you always say “how could you not tell me my hair looks bad” but i don’t know it never does look bad. I love that you wear your heart on your sleeve, you’re never shy or scared to show me how much you love me or just people and it’s such a great quality you have. And I love that giggle you make every single time I clear my throat 4 times when you tell me you love me and I can’t say it out loud back. You always giggle like clockwork and it’s just so adorable. 
-
-But it’s been three months now, and we got 9 months to go. I can’t wait to do this with you and it’s just the beginning of a lifetime that I’m so ready to have. We really gotta plan stuff I’m not sure what but we really I can’t wait. 
-
-I love you my other half. 
-From the half that’s nothing without you.</p>
+      <p>Hi Noor :p</p>
+      <p>I’m writing this whilst you’re sleeping with a couple days away from our third month...</p>
+      <p>I love you my other half.<br>From the half that’s nothing without you.</p>
     </div>
 
-      <div class="slide">
-      <p>Hi Noor <3
-
-Happy six months baby girl it’s feels like it wasn’t long ago when our story started. But in the bigger picture of things it started around a year ago. I remember I stalked your account when your profile picture was grey. Then I started work and it was December 24th when we spoke in the camp properly for the first time. You were supposed to go home but for some reason you couldn’t and Vedran was in the room with us and he had that huge scar on his face. I remember trying so hard to speak to you and you were completely a bitch. 
-
-Then it was May 10th where we had the accident with the motorbike. I just remember the hug I offered you that day and I was so nervous asking you if you wanted a hug. 
-
-And then it was May 16th where we realised we were obsessed with each other and we were so concerned about how badly we needed each other. But it had also ended on a bad note cos we didn’t know where we were going from there. We had no clue what was in the plans for us. And it was the following weekend where we tried to figure things out and somewhere along the lines we realised we were willing to put the effort in and try. 
-
-Then it was May 31st where the beginning of our story starts. Where I was nervous to ask you out. Where you begged to see me even if it was for a little. Where I finally was able to be yours. And where we sat and just spoke. 
-
-Somewhere along the way our relationship turned into something amazing and beautiful. And now it’s November 30th. The day I promise to marry you and promise that I’m sticking by your side. 
-
-We’ve got the next 6 months where the ball is gonna start rolling and things move fast so I wanna make sure that we take it slow and appreciate the time and things we do. 
-
-Now that I’m a little more grown up and I’m just looking back on everything I can really say I love you. Like I had this really skewed idea of the concept of love. I always thought it was this complicated and heavy feeling my heart had to feel and if it wasn’t complicated it wasn’t real cos then it wasn’t complex. And all I know is that couldn’t be more wrong. My heart feels light when I’m with you and things feel easy when I’m with you. I know I can talk to you about anything and you’ll always try to make me feel better. 
-
-I always write these with like a saying or quote or something to encapsulate how I’ve been feeling recently. And I hope one of our phone has charge when you read this but I made a video about how you make me feel. 
-
-That photo of you at the end fully sums up everything the warm smile the bubbly atmosphere everything. So I end this letter here restating my promise to marry you.  
-
-I love you to the moon and back baby girl my Noor I really do. 
-From the boy who is eager to marry the girls who sits in front of her.</p>
+    <div class="slide">
+      <p>Hi Noor &lt;3</p>
+      <p>Happy six months baby girl… Now that I’m a little more grown up and I’m just looking back on everything I can really say I love you...</p>
+      <p>I love you to the moon and back baby girl my Noor I really do.<br>From the boy who is eager to marry the girl who sits in front of her.</p>
     </div>
 
-    <!-- Add more letters here
-      <div class="slide">
-      <p>Sweetheart, every moment with you feels like magic…</p>
-    </div>
-    -->
-    
     <!-- Next/prev buttons -->
     <a class="prev" onclick="plusSlides(-1)">❮</a>
     <a class="next" onclick="plusSlides(1)">❯</a>
