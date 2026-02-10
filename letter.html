@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Love Letter</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Patrick Hand', cursive;
+      background-image: url("paper-bg.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-attachment: fixed;
+
+      margin: 0;
+      min-height: 100vh;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    /* Letter paper */
+    .letter-paper {
+      background: #fffdf8;
+      width: 100%;
+      max-width: 700px;
+      min-height: 80vh;
+      padding: 50px 50px;
+      border-radius: 8px;
+
+      box-shadow:
+        0 10px 25px rgba(0,0,0,0.25),
+        inset 0 0 0 1px #eee;
+
+      position: relative;
+    }
+
+    /* Optional subtle paper edge effect */
+    .letter-paper::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 12px;
+      background: rgba(0,0,0,0.03);
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+    }
+
+    .letter-header {
+      margin-bottom: 30px;
+      font-size: 22px;
+      color: #cc0000;
+    }
+
+    .letter-body {
+      font-size: 20px;
+      line-height: 1.7;
+      color: #444;
+      white-space: pre-line; /* keeps line breaks */
+    }
+
+    .letter-signoff {
+      margin-top: 40px;
+      font-size: 20px;
+    }
+
+    .signature {
+      margin-top: 10px;
+      font-size: 22px;
+      color: #cc0000;
+    }
+
+    @media (max-width: 600px) {
+      .letter-paper {
+        padding: 30px 25px;
+      }
+
+      .letter-body {
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="letter-paper">
+
+    <div class="letter-header">
+      Dear Noor,
+    </div>
+
+    <div class="letter-body">
+I don’t even really know where to start, but I know I wanted this to feel like something you could hold in your hands, even if it’s on a screen.
+
+Every time I think about you, it feels like my world gets a little quieter and a little brighter at the same time. Quieter because everything else fades out, and brighter because you somehow make even the ordinary feel special.
+
+I love the way you make me feel understood without me having to explain everything. I love the comfort I feel when I think about you. It’s the kind of feeling that makes me smile for no reason and makes my chest feel warm in a way I can’t really explain.
+
+You’ve become such a big part of my heart, and I don’t take that lightly. I’m grateful for you, for your laugh, for your smile, for the way you exist in my life. I don’t know what the future holds exactly, but I know that I want you in it.
+
+More than anything, I just want you to know how loved you are. By me. Always.
+    </div>
+
+    <div class="letter-signoff">
+      With all my love,
+      <div class="signature">
+        Yours 🤍
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
