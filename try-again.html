@@ -24,12 +24,13 @@
       align-items: center;
       justify-content: center;
       gap: 30px;
+      padding: 10px;
     }
 
     /* Message Card */
     .card {
       background-color: rgba(255, 255, 255, 0.8);
-      padding: 40px;
+      padding: 40px 30px;
       border-radius: 16px;
       text-align: center;
       box-shadow: 0 10px 25px rgba(0,0,0,0.25);
@@ -38,6 +39,15 @@
 
     h1, h2 {
       margin: 0 0 20px 0;
+    }
+
+    /* Sad Image */
+    .sad-img {
+      width: 120px;
+      height: auto;
+      margin-top: 15px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     }
 
     /* Button Card */
@@ -67,6 +77,27 @@
       background-color: #ff4d4d;
       color: white;
     }
+
+    /* Mobile adjustments */
+    @media (max-width: 500px) {
+      h1 {
+        font-size: 28px;
+      }
+
+      h2 {
+        font-size: 22px;
+      }
+
+      .sad-img {
+        width: 90px;
+      }
+
+      button {
+        font-size: 18px;
+        padding: 10px 20px;
+        min-width: 160px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -75,6 +106,7 @@
   <div class="card">
     <h1>Oops… Wrong answer Noor Mir :( </h1>
     <h2>Try Again</h2>
+    <img src="sad.jpg" alt="Sad Face" class="sad-img">
   </div>
 
   <!-- Button Card -->
