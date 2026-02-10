@@ -127,12 +127,30 @@
         font-size: 18px;
       }
 
-      .prev, .next {
-        font-size: 22px;
-        padding: 8px 12px;
-        left: -40px;
-        right: -40px;
-      }
+                .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-weight: bold;
+            font-size: 28px;
+            width: 50px;         /* fixed width */
+            height: 50px;        /* fixed height */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;  /* perfect circle */
+            background-color: rgba(0,0,0,0.5);
+            color: white;
+            user-select: none;
+            transition: 0.3s;
+            z-index: 10;
+          }
+          
+          .prev:hover, .next:hover {
+            background-color: rgba(0,0,0,0.8);
+          }
+
 
       .slideshow-container {
         padding: 20px 30px;
