@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Our Memory Map</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Patrick Hand', cursive;
+      background-image: url("paper-bg.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-attachment: fixed;
+
+      margin: 0;
+      min-height: 100vh;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      gap: 20px;
+    }
+
+    .card {
+      background-color: rgba(255, 255, 255, 0.85);
+      padding: 30px 20px;
+      border-radius: 16px;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+      width: 100%;
+      max-width: 800px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 32px;
+      color: #cc0000;
+    }
+
+    /* Map Container */
+    .map-card {
+      position: relative;
+      background-color: rgba(255,255,255,0.85);
+      padding: 20px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+      width: 100%;
+      max-width: 900px;
+    }
+
+    .map-card img {
+      width: 100%;
+      border-radius: 12px;
+      display: block;
+    }
+
+    /* Pin */
+    .pin {
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      background-color: #ff4d4d;
+      border-radius: 50% 50% 50% 0;
+      transform: rotate(-45deg);
+      cursor: pointer;
+    }
+
+    .pin::after {
+      content: "";
+      width: 10px;
+      height: 10px;
+      background: white;
+      border-radius: 50%;
+      position: absolute;
+      top: 7px;
+      left: 7px;
+    }
+
+    /* Tooltip */
+    .tooltip {
+      position: absolute;
+      background-color: rgba(255,255,255,0.95);
+      padding: 10px 14px;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+      font-size: 16px;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s, transform 0.3s;
+      transform: translateY(5px);
+      color: #cc0000;
+      z-index: 10;
+    }
+
+    .pin:hover + .tooltip {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 26px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Heading -->
+  <div class="card">
+    <h1>Our Little World of Us 🌍❤️</h1>
+  </div>
+
+  <!-- Map -->
+  <div class="map-card">
+    <!-- Replace with your own map image -->
+    <img src="map.jpg" alt="Our Map">
+
+    <!-- PIN 1 -->
+    <div class="pin" style="top: 40%; left: 50%;"></div>
+    <div class="tooltip" style="top: 32%; left: 52%;">
+      Where we first met 💕
+    </div>
+
+    <!-- PIN 2 -->
+    <div class="pin" style="top: 55%; left: 30%;"></div>
+    <div class="tooltip" style="top: 47%; left: 32%;">
+      Our first date ✨
+    </div>
+
+    <!-- PIN 3 -->
+    <div class="pin" style="top: 25%; left: 65%;"></div>
+    <div class="tooltip" style="top: 17%; left: 67%;">
+      That unforgettable trip 🗺️
+    </div>
+
+    <!-- PIN 4 -->
+    <div class="pin" style="top: 70%; left: 60%;"></div>
+    <div class="tooltip" style="top: 62%; left: 62%;">
+      Where I miss you the most 🥺❤️
+    </div>
+
+  </div>
+
+</body>
+</html>
